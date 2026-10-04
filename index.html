@@ -1,0 +1,461 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>NESRA Home | هوم وير مصري</title>
+<link rel="canonical" href="https://darnesra.com/">
+<meta property="og:type" content="website"><meta property="og:url" content="https://darnesra.com/"><meta property="og:title" content="NESRA Home | هوم وير مصري"><meta property="og:description" content="فساتين بيت وبيجامات بخامات مريحة وتصميم انسيابي، من S لحد 5XL. الدفع عند الاستلام داخل القاهرة."><meta property="og:image" content="https://darnesra.com/img/fd01_bur.jpg"><meta name="theme-color" content="#7b2232">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%237b2232%22/%3E%3Ctext x=%2232%22 y=%2244%22 font-size=%2236%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22Georgia%22%3EN%3C/text%3E%3C/svg%3E">
+<meta name="description" content="NESRA Home — فساتين بيت وبيجامات بخامات مريحة وتصميم انسيابي، بمقاسات من S لحد 5XL. الدفع عند الاستلام والتوصيل داخل القاهرة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
+<style>
+/* Layout: a fabric-swatch shop — sticky header, sample-card hero, filterable product grid, product sheet as a dialog, size guide + Cairo delivery as reference panels */
+:root{
+  --bg:#fbf7f3; --surface:#ffffff; --sunk:#f3ebe4; --line:#e7d9cf;
+  --fg:#2a1f22; --muted:#76646a; --brand:#7b2232; --brand-ink:#ffffff; --gold:#a8814f; --ok:#2f6b4a;
+  --display:"El Messiri","Noto Naskh Arabic","Times New Roman",serif;
+  --body:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif;
+  --r:14px; --shadow:0 10px 30px -18px rgba(60,20,30,.45);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#1a1316; --surface:#231a1e; --sunk:#2c2126; --line:#3d2e34;
+  --fg:#f4e9ec; --muted:#bba7ad; --brand:#d77a8b; --brand-ink:#1a1316; --gold:#d3aa75; --ok:#7cc29a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#1a1316; --surface:#231a1e; --sunk:#2c2126; --line:#3d2e34;
+  --fg:#f4e9ec; --muted:#bba7ad; --brand:#d77a8b; --brand-ink:#1a1316; --gold:#d3aa75; --ok:#7cc29a; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.75;direction:rtl;margin:0}
+.wrap{max-width:1180px;margin-inline:auto;padding-inline:20px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.3;margin:0}
+a{color:var(--brand)}
+button,select,input{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.ltr{direction:ltr;unicode-bidi:isolate}
+.num{font-variant-numeric:tabular-nums}
+
+/* header */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:16px;padding-block:12px}
+.logo{display:flex;flex-direction:column;align-items:center;line-height:1;text-decoration:none;color:var(--brand)}
+.logo b{font-family:var(--display);font-size:24px;letter-spacing:.32em;direction:ltr;padding-left:.32em}
+.logo small{font-size:9px;letter-spacing:.6em;direction:ltr;padding-left:.6em;margin-top:4px;color:var(--fg)}
+nav.links{display:flex;gap:18px;margin-inline-start:auto;flex-wrap:wrap}
+nav.links a{color:var(--fg);text-decoration:none;font-size:15px}
+nav.links a:hover{color:var(--brand)}
+.bagbtn{position:relative;display:grid;place-items:center;width:46px;height:46px;background:transparent;color:var(--fg);border:1px solid var(--line);border-radius:50%;cursor:pointer;transition:border-color .2s,color .2s}
+.bagbtn:hover{border-color:var(--brand);color:var(--brand)}
+.bagbtn svg{width:22px;height:22px}
+.bagbtn .cnt{position:absolute;top:-4px;inset-inline-end:-4px;background:var(--brand);color:var(--brand-ink);border-radius:999px;min-width:20px;height:20px;padding:0 5px;display:grid;place-items:center;font-size:11px;font-weight:700;line-height:1;border:2px solid var(--bg)}
+.bagbtn .cnt[data-zero]{display:none}
+@media (max-width:760px){nav.links{display:none}.bar{justify-content:space-between}}
+
+/* notice strip */
+.strip{background:var(--brand);color:var(--brand-ink);font-size:14px;text-align:center;padding-block:7px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding-block:48px 32px}
+.hero .eyebrow{color:var(--gold);letter-spacing:.08em;font-weight:600;font-size:14px}
+.hero h1{font-size:clamp(34px,5vw,56px);margin-block:8px 14px}
+.hero p{color:var(--muted);max-width:52ch;margin:0 0 22px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:11px 22px;border:1px solid var(--brand);background:var(--brand);color:var(--brand-ink);font-weight:600;text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--brand)}
+.facts{display:flex;gap:26px;flex-wrap:wrap;margin-top:26px;font-size:14px;color:var(--muted)}
+.facts b{display:block;font-family:var(--display);font-size:22px;color:var(--fg)}
+.swatchboard{position:relative;aspect-ratio:1/1;max-width:100%}
+.swatchboard figure{position:absolute;margin:0;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);background:var(--sunk)}
+.swatchboard img{width:100%;height:100%;object-fit:cover;display:block}
+.swatchboard .a{inset:0 30% 22% 0}
+.swatchboard .b{inset:36% 0 0 42%}
+.swatchboard .tag{position:absolute;bottom:10px;inset-inline-start:10px;background:var(--surface);color:var(--fg);font-size:12px;padding:3px 10px;border-radius:999px}
+@media (max-width:820px){.hero{grid-template-columns:1fr;padding-block:28px 16px}.swatchboard{max-width:440px}}
+
+/* sections */
+section{padding-block:40px}
+.sechead{display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:18px}
+.sechead h2{font-size:clamp(26px,3.4vw,36px)}
+.sechead p{color:var(--muted);margin:4px 0 0}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 14px;cursor:pointer;font-size:14px}
+.chip[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+
+/* grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:22px}
+.swatchboard figure.a .tag{top:10px;bottom:auto}
+@media (max-width:560px){.grid{grid-template-columns:1fr 1fr;gap:12px}.card .meta{padding:10px}.card h3{font-size:17px}.card .sub{font-size:12.5px;line-height:1.5}.code{font-size:10.5px}.price{font-size:14px}.dots i{width:11px;height:11px}.badge{font-size:11px;padding:1px 8px}.card .row{flex-wrap:wrap;gap:2px 8px}.card .sub{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;cursor:pointer;text-align:start;padding:0;transition:transform .2s ease, box-shadow .2s ease}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.card .ph{aspect-ratio:4/5;background:var(--sunk);position:relative;overflow:hidden}
+.card .ph img,.card .ph svg{width:100%;height:100%;object-fit:cover;display:block}
+.badge{position:absolute;top:10px;inset-inline-start:10px;background:var(--surface);color:var(--fg);border-radius:999px;font-size:12px;padding:2px 10px;font-weight:600}
+.badge.new{background:var(--gold);color:#fff}
+.card .meta{padding:12px 14px 14px;display:grid;gap:4px}
+.card .row{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.card h3{font-size:20px}
+.code{font-size:12px;letter-spacing:.12em;color:var(--gold);direction:ltr;font-weight:600}
+.price{font-weight:600;color:var(--brand);white-space:nowrap}
+.card .sub{color:var(--muted);font-size:14px}
+.dots{display:flex;gap:5px;margin-top:4px}
+.dots i{width:14px;height:14px;border-radius:50%;border:1px solid var(--line);display:block}
+
+/* size guide */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+@media (max-width:860px){.two{grid-template-columns:1fr}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;min-width:0}
+.panel h3{font-size:22px;margin-bottom:6px}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:center;white-space:nowrap}
+th{font-weight:600;color:var(--muted);font-size:13px}
+td:first-child,th:first-child{text-align:start;font-weight:600}
+.finder{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-block:12px}
+.finder label{font-size:13px;color:var(--muted);display:grid;gap:4px}
+.finder input{width:100%;border:1px solid var(--line);background:var(--bg);border-radius:10px;padding:8px 10px}
+.result{background:var(--sunk);border-radius:12px;padding:12px 14px;font-size:15px}
+.result b{font-family:var(--display);font-size:26px;color:var(--brand)}
+@media (max-width:480px){.finder{grid-template-columns:1fr 1fr}}
+
+/* delivery */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;counter-reset:s}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;counter-increment:s}
+.step::before{content:counter(s);display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--brand);color:var(--brand-ink);font-weight:700;margin-bottom:8px}
+.step h3{font-size:19px}
+.step p{margin:4px 0 0;color:var(--muted);font-size:14px}
+@media (max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.steps{grid-template-columns:1fr}}
+.areas{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.areas span{background:var(--sunk);border-radius:999px;padding:3px 11px;font-size:13px}
+
+details{border-bottom:1px solid var(--line);padding-block:12px}
+summary{cursor:pointer;font-weight:600}
+details p{color:var(--muted);margin:6px 0 0}
+footer{border-top:1px solid var(--line);padding-block:30px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;gap:20px;justify-content:space-between;flex-wrap:wrap}
+
+/* dialog */
+dialog{border:0;border-radius:18px;padding:0;max-width:min(980px,calc(100vw - 24px));width:100%;background:var(--surface);color:var(--fg);box-shadow:0 30px 80px -20px rgba(0,0,0,.5)}
+dialog::backdrop{background:rgba(20,10,14,.55)}
+.sheet{display:grid;grid-template-columns:1fr 1fr;min-height:0}
+.sheet .gal{background:var(--sunk);display:flex;flex-direction:column}
+.sheet .gal .main{aspect-ratio:4/5;max-width:100%}
+.sheet .gal .main img,.sheet .gal .main svg{width:100%;height:100%;object-fit:contain;display:block}
+.thumbs{display:flex;gap:6px;padding:8px;overflow-x:auto}
+.thumbs button{border:2px solid transparent;border-radius:8px;padding:0;width:54px;height:54px;flex:none;overflow:hidden;background:var(--surface);cursor:pointer}
+.thumbs button[aria-pressed="true"]{border-color:var(--brand)}
+.thumbs img{width:100%;height:100%;object-fit:cover}
+.info{padding:22px 24px;display:grid;gap:14px;align-content:start;min-width:0;max-height:88vh;overflow:auto}
+.info h2{font-size:30px}
+.info .lead{color:var(--muted);margin:0}
+.opt{display:grid;gap:6px}
+.opt>span{font-size:13px;color:var(--muted)}
+.opts{display:flex;flex-wrap:wrap;gap:6px}
+.opts button{border:1px solid var(--line);background:var(--bg);border-radius:10px;padding:6px 12px;cursor:pointer;font-size:14px;display:flex;align-items:center;gap:6px}
+.opts button[aria-pressed="true"]{border-color:var(--brand);box-shadow:inset 0 0 0 1px var(--brand)}
+.opts button i{width:14px;height:14px;border-radius:50%;display:block;border:1px solid var(--line)}
+.specs{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:14px}
+.specs dt{color:var(--muted)}
+.specs dd{margin:0}
+.offer{background:var(--sunk);border-radius:10px;padding:8px 12px;font-size:14px}
+.close{position:absolute;top:10px;inset-inline-end:10px;background:var(--surface);border:1px solid var(--line);border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:18px;z-index:2}
+.qty{display:flex;align-items:center;gap:8px}
+.qty button{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:var(--bg);cursor:pointer}
+@media (max-width:760px){.sheet{grid-template-columns:1fr}.sheet .gal .main{aspect-ratio:1/1}.info{max-height:none}}
+
+/* bag */
+.bag{max-width:min(560px,calc(100vw - 24px))}
+.bag .in{padding:22px;display:grid;gap:14px}
+.line{display:grid;grid-template-columns:56px 1fr auto;gap:10px;align-items:center;border-bottom:1px solid var(--line);padding-bottom:10px}
+.line img,.line svg{width:56px;height:56px;object-fit:cover;border-radius:8px;background:var(--sunk)}
+.line small{color:var(--muted);display:block}
+.line button{border:0;background:none;color:var(--muted);cursor:pointer}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.form label{display:grid;gap:4px;font-size:13px;color:var(--muted)}
+.form .full{grid-column:1/-1}
+.form input,.form select{border:1px solid var(--line);background:var(--bg);border-radius:10px;padding:9px 10px;width:100%}
+.totals{display:grid;gap:4px;font-size:15px}
+.totals div{display:flex;justify-content:space-between}
+.totals .grand{font-weight:700;font-size:18px;color:var(--brand)}
+.note{font-size:13px;color:var(--muted)}
+.copyrow{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+textarea#msg{width:100%;min-height:110px;border:1px solid var(--line);border-radius:10px;background:var(--bg);padding:8px;font-size:13px}
+@media (max-width:480px){.form{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style></head><body>
+
+<div class="strip">الدفع كاش عند الاستلام · التوصيل داخل القاهرة · التسليم خلال ٢٠ يوم من تأكيد الطلب</div>
+<header class="top"><div class="wrap bar">
+  <a class="logo" href="#top" aria-label="NESRA Home"><b>NESRA</b><small>HOME</small></a>
+  <nav class="links" aria-label="أقسام الموقع">
+    <a href="#shop">الموديلات</a><a href="#sizes">المقاسات</a><a href="#delivery">الطلب والتوصيل</a><a href="#faq">أسئلة</a>
+  </nav>
+  <button class="bagbtn" id="openBag" type="button" aria-label="الشنطة"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg><span class="cnt num" id="bagCount" data-zero>0</span></button>
+</div></header>
+
+<main id="top">
+<div class="wrap hero">
+  <div>
+    <div class="eyebrow">هوم وير مصري · من S لحد 5XL</div>
+    <h1>شياكتك تبدأ من بيتك</h1>
+    <p>فساتين بيت وبيجامات بخامات مريحة بتتنفّس وتصميم انسيابي، بمقاسات من S لحد 5XL. اختاري لونك ومقاسك واطلبي في دقيقة، والدفع كاش عند الاستلام.</p>
+    <div class="cta"><a class="btn" href="#shop">شوفي الموديلات</a><a class="btn ghost" href="#sizes">اعرفي مقاسك</a></div>
+    <div class="facts">
+      <div><b class="num">١٣</b>موديل</div>
+      <div><b class="num">٨</b>مقاسات</div>
+      <div><b class="num">كاش</b>عند الاستلام</div>
+    </div>
+  </div>
+  <div class="swatchboard" aria-hidden="true">
+    <figure class="a"><img src="img/fd01_bur.jpg" alt=""><span class="tag">ليان · FD01</span></figure>
+    <figure class="b"><img src="img/nh05_olr.jpg" alt=""><span class="tag">كاميليا · NH05</span></figure>
+  </div>
+</div>
+
+<section id="shop"><div class="wrap">
+  <div class="sechead">
+    <div><h2>الموديلات</h2><p>اضغطي على أي موديل علشان تشوفي الألوان والمقاسات والخامة.</p></div>
+    <div class="chips" id="filters" role="group" aria-label="فلترة الموديلات"></div>
+  </div>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<section id="sizes"><div class="wrap">
+  <div class="sechead"><div><h2>المقاسات</h2><p>المقاسات دي لجسمك إنتي، مش للقطعة. لو بين مقاسين خدي الأكبر.</p></div></div>
+  <div class="two">
+    <div class="panel">
+      <h3>اعرفي مقاسك</h3>
+      <p class="note">اكتبي وزنك وطولك، ولو تعرفي محيط صدرك يبقى أدق.</p>
+      <div class="finder">
+        <label for="fw">الوزن (كجم)<input id="fw" type="number" inputmode="numeric" value="72" min="35" max="200"></label>
+        <label for="fh">الطول (سم)<input id="fh" type="number" inputmode="numeric" value="162" min="130" max="200"></label>
+        <label for="fb">محيط الصدر (سم)<input id="fb" type="number" inputmode="numeric" placeholder="اختياري" min="60" max="180"></label>
+      </div>
+      <div class="result" id="sizeResult" aria-live="polite"></div>
+    </div>
+    <div class="panel">
+      <h3>جدول المقاسات</h3>
+      <div class="tablewrap"><table>
+        <thead><tr><th>المقاس</th><th>الوزن التقريبي</th><th>الصدر</th><th>الوسط</th><th>الأرداف</th></tr></thead>
+        <tbody id="sizeTable"></tbody>
+      </table></div>
+      <p class="note">الوزن تقريبي لطول ١٥٥–١٧٠ سم. الأرقام بالسنتيمتر لمحيط الجسم. موديلات «ليالي NESRA» بمقاسات مزدوجة (S/M، L/XL، 2XL/3XL، 4XL/5XL).</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="delivery"><div class="wrap">
+  <div class="sechead"><div><h2>الطلب والتوصيل</h2><p>بنوصّل حاليًا داخل محافظة القاهرة بس، وقريب باقي المحافظات.</p></div></div>
+  <div class="steps">
+    <div class="step"><h3>اختاري</h3><p>الموديل واللون والمقاس، وحطّيهم في الشنطة.</p></div>
+    <div class="step"><h3>ابعتي الطلب</h3><p>اكتبي اسمك وعنوانك في القاهرة ورقمين للتواصل، والطلب بيوصلنا على طول.</p></div>
+    <div class="step"><h3>نأكد معاكي</h3><p>هنكلمك على الواتساب نأكد الموديل والمقاس والعنوان. من غير أي دفع مقدم.</p></div>
+    <div class="step"><h3>استلمي وادفعي</h3><p>خلال ٢٠ يوم من تأكيد الطلب، والدفع كاش عند الاستلام. التوصيل ٨٠ جنيه، ومجاني في عروض الكمية.</p></div>
+  </div>
+  <div class="panel" style="margin-top:18px">
+    <h3>مناطق التوصيل في القاهرة</h3>
+    <div class="areas" id="areas"></div>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap" style="max-width:820px">
+  <div class="sechead"><div><h2>أسئلة بتتكرر</h2></div></div>
+  <details><summary>بدفع إزاي؟</summary><p>الدفع كاش عند الاستلام، من غير أي دفع مقدم. بنصنّع كل كمية على قد الطلبات علشان نضمن الجودة والمقاس، والتسليم خلال ٢٠ يوم من تأكيد الطلب.</p></details>
+  <details><summary>الصور دي حقيقية؟</summary><p>الصور تصوّر للتصميم والألوان. أول ما العينات تتصوّر هنحط صورها هنا، والألوان الفعلية ممكن تختلف بسيط حسب الإضاءة.</p></details>
+  <details><summary>بتوصلوا بره القاهرة؟</summary><p>لسه لأ. بنبدأ بالقاهرة الأول، وهنعلن أول ما نفتح الجيزة وباقي المحافظات.</p></details>
+  <details><summary>لو المقاس طلع مش مظبوط؟</summary><p>كلّمينا على الواتساب أول ما تستلمي، وبنبدّل المقاس طالما القطعة بحالتها.</p></details>
+  <details><summary>الخامات بتتغسل إزاي؟</summary><p>غسيل هادي ٣٠ درجة، من غير مبيّض، وكي على حرارة واطية من الضهر. كل قطعة معاها كارت عناية.</p></details>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div><b style="color:var(--fg)">NESRA Home</b><br>هوم وير مصري · القاهرة<br><span class="note">© 2026 NESRA Home · <span class="ltr">darnesra.com</span></span></div>
+  <div>واتساب: <a class="ltr num" href="https://wa.me/201290028408" rel="noopener">01290028408</a><br>إيميل: <a class="ltr" href="mailto:info@darnesra.com">info@darnesra.com</a><br>إنستجرام: <a class="ltr" href="https://instagram.com/darnesra" rel="noopener">@darnesra</a> · تيك توك: <span class="ltr">@nesrahome</span></div>
+  <div><b style="color:var(--fg)">سياسة الطلب</b><br>الدفع كاش عند الاستلام<br>تبديل المقاس خلال ٣ أيام من الاستلام لو القطعة بحالتها<br>التوصيل داخل القاهرة</div>
+</div></footer>
+
+<dialog id="pd" aria-labelledby="pdTitle"><button class="close" type="button" data-close aria-label="إغلاق">×</button><div class="sheet" id="pdBody"></div></dialog>
+<dialog id="bag" class="bag" aria-labelledby="bagTitle"><button class="close" type="button" data-close aria-label="إغلاق">×</button><div class="in" id="bagBody"></div></dialog>
+
+<script>
+const WA="201290028408", SHIP=80, EMAIL="info@darnesra.com";
+const SIZES=["S","M","L","XL","2XL","3XL","4XL","5XL"], PHS=["S/M","L/XL","2XL/3XL","4XL/5XL"];
+const BODY=[["S","50–58",[84,88],[66,70],[92,96]],["M","58–66",[89,94],[71,76],[97,102]],["L","66–75",[95,101],[77,83],[103,109]],["XL","75–85",[102,109],[84,91],[110,117]],["2XL","85–95",[110,119],[92,101],[118,127]],["3XL","95–105",[120,129],[102,111],[128,137]],["4XL","105–115",[130,139],[112,121],[138,147]],["5XL","115–125",[140,149],[122,131],[148,157]]];
+const C=(n,h,img)=>({n,h,img});
+const FDC=[C("خمري","#841c2b","fd01_bur"),C("أسود","#151319","fd01_blk"),C("أخضر زمردي","#164d3a","fd01_emr"),C("كحلي","#202c49","fd01_nvy"),C("برقوقي","#663c62","fd01_plm"),C("بني كاكاو","#623c32","fd01_coc")];
+const plain=a=>a.map(c=>({n:c.n,h:c.h}));
+const CAT={fd:"فساتين البيت",nh:"هوم وير وبيجامات",eg:"قفاطين وجلاليب",ph:"ليالي NESRA"};
+// finished-garment size specs (cm): bust circumference, length
+const spec=(b0,step,l0,lstep=1)=>SIZES.map((s,i)=>[s,b0+i*step+(i>3?2*(i-3):0),l0+Math.round(i*lstep)]);
+const P=[
+ {c:"FD01",n:"ليان",cat:"fd",price:800,offer:"٦ قطع أو أكتر: القطعة بـ ٦٥٠ جنيه والتوصيل مجاني",t:"فستان قصير بأكمام دانتيل وكرانيش",d:"جيرسي ناعم ماشي مع الجسم، فتحة صدر قلب بربطة، كشكشة جانبية، أكمام دانتيل واسعة، وذيل طبقات بحافة دانتيل.",fab:"جيرسي فيسكوز ٩٥٪ / ليكرا ٥٪ · ١٩٠–٢١٠ جم/م² · دانتيل ورد مرن",colors:FDC,img:"fd01_bur",real:1,specs:spec(92,6,99,1)},
+ {c:"NH05",n:"كاميليا",cat:"nh",price:1600,offer:"٣ قطع أو أكتر: القطعة بـ ١٤٠٠ جنيه والتوصيل مجاني",t:"بيجامة زراير قميص وبنطلون",d:"قميص بياقة مريحة وكم كيمونو قصير، وبنطلون مستقيم بوسط مسطّح من قدّام وأستك من ورا. ورد نباتي وبايبنج ٣ مم وتطريز NESRA على الجيب.",fab:"فيسكوز تويل ١٠٠٪ مطبوع · ١٢٥ جم/م²",colors:[C("جوري زيتوني","#24403d","nh05_olr"),C("ورد مطفي","#c9948f","nh05_mtr"),C("ياسمين كحلي","#1c2b4a","nh05_nvj")],img:"nh05_olr",real:1,specs:[["S",102,66],["M",108,67],["L",115,68],["XL",123,69],["2XL",133,71],["3XL",143,72],["4XL",153,74],["5XL",163,75]]},
+ {c:"FD02",n:"تاليا",cat:"fd",price:750,t:"فستان قصير بالكرانيش",d:"نفس روح ليان من غير دانتيل: تجميع أمامي بربطة، أكمام وفولان متدرّجين من نفس القماش.",fab:"جيرسي فيسكوز ٩٥٪ / ليكرا ٥٪ · ١٩٠–٢١٠ جم/م²",colors:plain(FDC),img:"fd02",specs:spec(92,6,99,1)},
+ {c:"FD03",n:"سيلا",cat:"fd",price:790,t:"فستان سادة بلمسة ليوبارد",d:"جسم سادة بتجميع عند الصدر، أكمام واسعة بنقشة ليوبارد، وردة قماش في النص، وحلية ليوبارد عند الذيل.",fab:"جيرسي فيسكوز ليكرا سادة + جيرسي مطبوع ليوبارد",colors:plain(FDC),img:"fd03",specs:spec(92,6,99,1)},
+ {c:"FD04",n:"سلمى",cat:"fd",price:690,isNew:1,shape:"vneck",t:"فستان ميدي A برقبة V وجيوب",d:"قصة A واسعة من تحت الصدر، رقبة V هادية، من غير أكمام، وجيبين جانب. ينفع للبيت وللزيارات الخفيفة.",fab:"فيسكوز شالي مطبوع · ١٢٠–١٣٠ جم/م² (بديل: قطن ليكرا)",colors:[C("بلح","#b5476a","fd04_blh"),C("لافندر","#9b86c4","fd04_lav"),C("خوخي","#ee9f84","fd04_pch"),C("زيتي فاتح","#8ea47a","fd04_olv")],img:"fd04_blh",specs:spec(96,6,110,0.5)},
+ {c:"FD05",n:"فيروز",cat:"fd",price:750,isNew:1,shape:"cap",t:"فستان ميدي بكم كاب وفتحة رقبة",d:"كم كاب قصير، فتحة رقبة مشقوقة، كسرة بوكس في النص بتدّي حركة، وجيوب جانب. طبعة ورد كبيرة جريئة لست بتحب الألوان.",fab:"كريب فيسكوز مطبوع · ١٣٠ جم/م²",colors:[C("أسود وذهبي","#3a3020","fd05_bkg"),C("كحلي وفيروزي","#1d4e66","fd05_ntq"),C("فوشيا ليلي","#b0216b","fd05_fsh")],img:"fd05_bkg",specs:spec(98,6,110,0.5)},
+ {c:"FD06",n:"زينة",cat:"fd",price:650,isNew:1,shape:"short",t:"فستان ميدي بخصر إمباير ووردة مطبوعة",d:"فستان ميدي من غير أكمام، رقبة مدورة بكسرات ناعمة، خصر عالي تحت الصدر، وتنورة واسعة عليها فرع ورد كبير مطبوع على الجنب. خفيف لأيام الحر.",fab:"قطن لينن / بوبلين قطن ١٠٠٪ · ١٢٠–١٤٠ جم/م²",colors:[C("روز","#d9707c","fd06_ros"),C("سماوي","#8fbfe6","fd06_sky"),C("ليموني","#ece88a","fd06_lmn")],img:"fd06_ros",specs:spec(96,6,110,0.5)},
+ {c:"NH01",n:"جوري",cat:"nh",price:690,t:"فستان بيت قصير A-line",d:"صدر وكم بتلة مورّدين مع حزام وتنورة سادة، قصة A مريحة لتحت الركبة بشوية، بجيوب جانبية.",fab:"جيرسي قطن ٦٠٪ / فيسكوز ٣٥٪ / ليكرا ٥٪ · ١٩٠ جم/م²",colors:[C("جنينة الليل","#1f2a3a"),C("ياسمين كحلي","#1c2b4a"),C("لبن الورد","#e9d3cf"),C("جوري زيتوني","#4d5a3c"),C("ورد الرمان","#9c3346"),C("صباح النعناع","#a9cdb8")],img:"nh01",specs:spec(94,6,100,1)},
+ {c:"NH02",n:"فلورا",cat:"nh",price:790,t:"توب مورّد + بنطلون واسع",d:"توب بفتحة V وكم فراشة وكسرة حركة في الضهر، مع بنطلون رجل واسعة بوسط أستك ورباط وجيبين.",fab:"جيرسي قطن / فيسكوز / ليكرا · ١٨٠–٢٠٠ جم/م²",colors:[C("جنينة الليل","#1f2a3a"),C("ياسمين كحلي","#1c2b4a"),C("كاكاو وجوري","#6b4236"),C("جوري زيتوني","#4d5a3c")],img:"nh02",specs:spec(98,6,64,1)},
+ {c:"NH03",n:"ندى",cat:"nh",price:720,t:"قميص قصير + شورت واسع",d:"قميص بياقة كامب وزراير ناعمة وبايبنج، مع شورت فلاتر بوسط أستك ورباط. خفيف للصيف.",fab:"بوبلين قطن ممشّط ١٠٠٪ · ١٢٠ جم/م²",colors:[C("ياسمين كحلي","#1c2b4a"),C("لبن الورد","#e9d3cf"),C("صباح النعناع","#a9cdb8")],img:"nh03",specs:spec(100,6,64,1)},
+ {c:"NH04",n:"ليلاك",cat:"nh",price:790,t:"توب لفّة + كابري",d:"توب بصدر لفّة ثابت ودرابيه جانبي وبيبلم مورّد، مع كابري سادة بفتحة بتلة.",fab:"جيرسي فيسكوز ٩٥٪ / ليكرا ٥٪ · ١٩٠ جم/م²",colors:[C("ورد الرمان","#9c3346"),C("جنينة الليل","#1f2a3a"),C("ياسمين كحلي","#1c2b4a")],img:"nh04",specs:spec(94,6,62,1)},
+ {c:"NH06",n:"ياسمين",cat:"eg",price:890,t:"قفطان واسع للكاحل",d:"قفطان برقبة V هادية وكم دولمان للكوع، وطبعة حدود عند الرقبة والأكمام والذيل، بجيبين ورباط داخلي.",fab:"فيسكوز شالي ١٠٠٪ · ١٣٠ جم/م²",colors:[C("لوتس القمر","#d9cbb4"),C("كاكاو وجوري","#6b4236"),C("جنينة الليل","#1f2a3a")],img:"nh06",specs:spec(124,8,132,1)},
+ {c:"PH01",hidden:1,n:"روزيل",cat:"ph",price:1450,t:"طقم ٣ قطع: قميص + روب مورّد",d:"قميص نوم بقصة مائلة وحمالات بتتظبط، روب ستان مورّد بحزام وأكمام واسعة، وقطعة داخلية ببطانة قطن.",fab:"ستان مطفي مطاط + دانتيل ناعم + مودال",colors:[C("أسود وروبي","#2a1418"),C("برقوق وياسمين","#5b2d4b"),C("عاجي وبلش","#ecd8cc")],img:"ph01",ph:1},
+ {c:"PH02",hidden:1,n:"أريج",cat:"ph",price:990,t:"بيبي دول بتطريز ورد + شورت",d:"صدر ناعم مبطّن من غير سلك، تنورة شبك مطرّزة بورد متدرّج، وشورت مودال مريح.",fab:"ستان مطاط + شبك مطرّز + مودال",colors:[C("ورد الرمان","#9c3346"),C("برقوق وياسمين","#5b2d4b"),C("أسود وروبي","#2a1418")],img:"ph02",ph:1},
+ {c:"PH03",hidden:1,n:"زمرد",cat:"ph",price:750,t:"بودي ستان ودانتيل",d:"بودي بصدر ناعم مبطّن، لوح أمامي ستان مرن، وجوانب دانتيل.",fab:"ستان مطاط + دانتيل مرن",colors:[C("زمرد ودهبي","#16483a"),C("أسود وروبي","#2a1418"),C("ورد الرمان","#9c3346")],img:"ph03",ph:1},
+ {c:"PH04",hidden:1,n:"لوتس",cat:"ph",price:690,t:"كامي ستان مورّد + شورت",d:"كامي برقبة V وحمالات بتتظبط وتفصيلة دانتيل، مع شورت واسع بوسط أستك.",fab:"ستان مطفي مورّد + دانتيل",colors:[C("لوتس القمر","#d9cbb4"),C("ورد الرمان","#9c3346"),C("عاجي وبلش","#ecd8cc")],img:"ph04",ph:1},
+ {c:"PH05",n:"لونا",cat:"ph",price:890,t:"قميص نوم طويل ستان",d:"قصة A على الميل، رقبة V بدانتيل ناعم، وورد بيزيد تدريجيًا عند الذيل.",fab:"ستان مطفي + دانتيل ناعم",colors:[C("برقوق وياسمين","#5b2d4b"),C("لوتس القمر","#d9cbb4"),C("أسود وروبي","#2a1418")],img:"ph05",ph:1},
+ {c:"PH06",hidden:1,n:"أوركيد",cat:"ph",price:1650,t:"طقم ٣ قطع: توب + شورت + روب جاكار",d:"توب صدر مبطّن، شورت مريح، وروب جاكار مورّد بحزام لحد الركبة. هدية العروسة.",fab:"ستان جاكار + ستان مرن + دانتيل مطفي",colors:[C("عاجي وبلش","#ecd8cc"),C("برقوق وياسمين","#5b2d4b"),C("أسود وروبي","#2a1418")],img:"ph06",ph:1},
+].filter(p=>!p.hidden);
+const AREAS=["مدينة نصر","مصر الجديدة","النزهة","التجمع الخامس","التجمع الأول","التجمع الثالث","الرحاب","مدينتي","الشروق","بدر","مدينة المستقبل","المقطم","المعادي","البساتين","دار السلام","حلوان","التبين","١٥ مايو","وسط البلد","الزمالك","جاردن سيتي","عابدين","السيدة زينب","مصر القديمة","المنيل","الدرب الأحمر","الجمالية","باب الشعرية","الموسكي","شبرا","روض الفرج","الساحل","الزاوية الحمراء","حدائق القبة","الزيتون","الوايلي","العباسية","عين شمس","المطرية","المرج","السلام","النهضة","القاهرة الجديدة (مناطق أخرى)"];
+const egp=n=>n.toLocaleString("ar-EG")+" جنيه";
+const sizesOf=p=>p.sizes||(p.ph?PHS:SIZES);
+
+// original flat sketches for new styles
+let SK=0;
+function sketch(shape,col){
+  const f=col||"#b5476a", s="rgba(0,0,0,.25)", id="fl"+(++SK);
+  const pat=`<defs><pattern id="${id}" width="26" height="26" patternUnits="userSpaceOnUse"><rect width="26" height="26" fill="${f}"/><g fill="#fff" opacity=".55"><circle cx="6" cy="6" r="2.4"/><circle cx="19" cy="17" r="2"/><circle cx="3" cy="3.5" r="1"/><circle cx="9" cy="3.5" r="1"/><circle cx="3" cy="8.5" r="1"/><circle cx="9" cy="8.5" r="1"/></g></pattern></defs>`;
+  const paths={
+    vneck:"M140 60 L170 60 L200 110 L230 60 L260 60 L262 150 L245 175 L300 470 L100 470 L155 175 L138 150 Z",
+    cap:"M150 60 L185 62 L200 100 L215 62 L250 60 L292 92 L270 132 L250 128 L252 175 L305 470 L95 470 L148 175 L150 128 L130 132 L108 92 Z",
+    short:"M150 60 L180 60 Q200 80 220 60 L250 60 L256 150 L240 170 L290 400 L110 400 L160 170 L144 150 Z",
+    kaftan:"M150 55 Q200 85 250 55 L330 90 L310 170 L262 160 L300 520 L100 520 L138 160 L90 170 L70 90 Z",
+    galabeya:"M155 55 L200 120 L245 55 L340 100 L320 260 L270 200 L285 530 L115 530 L130 200 L80 260 L60 100 Z",
+    isdal:"M200 30 Q150 30 140 90 Q90 120 50 300 L120 330 L150 230 L130 540 L270 540 L250 230 L280 330 L350 300 Q310 120 260 90 Q250 30 200 30 Z"
+  };
+  const extra={vneck:'<path d="M170 60 L200 110 L230 60" fill="none" stroke="'+s+'" stroke-width="2"/><path d="M150 300 l18 4 M250 300 l-18 4" stroke="'+s+'" stroke-width="3"/>',
+   cap:'<path d="M190 70 L200 105 L210 70" fill="none" stroke="'+s+'" stroke-width="2"/><path d="M200 175 L200 470" stroke="'+s+'" stroke-width="2"/>',
+   short:'<path d="M182 66 l4 22 M200 70 l0 24 M218 66 l-4 22" stroke="'+s+'" stroke-width="2"/><g fill="#fff" opacity=".8"><circle cx="230" cy="320" r="26"/><circle cx="205" cy="345" r="16"/></g>',
+   kaftan:'<path d="M168 62 Q200 92 232 62" fill="none" stroke="'+s+'" stroke-width="2"/>',
+   galabeya:'<path d="M155 55 L200 120 L245 55" fill="none" stroke="#e9c77e" stroke-width="9"/><path d="M200 120 L200 230" stroke="#e9c77e" stroke-width="7"/>',
+   isdal:'<ellipse cx="200" cy="95" rx="32" ry="38" fill="rgba(255,255,255,.35)"/>'};
+  return `<svg viewBox="0 0 400 560" role="img" aria-label="رسم توضيحي للموديل">${pat}<rect width="400" height="560" fill="var(--sunk)"/><path d="${paths[shape]}" fill="url(#${id})" stroke="${s}" stroke-width="2"/>${extra[shape]||""}<text x="200" y="550" text-anchor="middle" font-size="13" fill="var(--muted)" font-family="IBM Plex Sans Arabic">رسم توضيحي · الصور قريب</text></svg>`;
+}
+const pic=(p,ci=0)=>{const c=p.colors[ci];const im=(c&&c.img)||(ci===0&&p.img);return im?`<img src="img/${im}.jpg" alt="${p.n} ${c?c.n:""}" loading="lazy">`:sketch(p.shape,c&&c.h);};
+
+// grid + filters
+let filter="all";
+const F=[["all","الكل"],["fd","فساتين البيت"],["nh","هوم وير وبيجامات"],["eg","قفاطين وجلاليب"],["ph","ليالي NESRA"],["new","جديد"]];
+const fEl=document.getElementById("filters");
+fEl.innerHTML=F.map(([k,l])=>`<button class="chip" type="button" data-f="${k}" aria-pressed="${k==="all"}">${l}</button>`).join("");
+fEl.addEventListener("click",e=>{const b=e.target.closest("[data-f]");if(!b)return;filter=b.dataset.f;fEl.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x===b));render();});
+function render(){
+  const list=P.filter(p=>filter==="all"||(filter==="new"?p.isNew:p.cat===filter));
+  document.getElementById("grid").innerHTML=list.map(p=>`<button class="card" type="button" data-p="${p.c}">
+   <div class="ph">${pic(p)}${p.isNew?'<span class="badge new">جديد</span>':p.offer?'<span class="badge">عرض كمية</span>':""}</div>
+   <div class="meta"><div class="row"><h3>${p.n}</h3><span class="code">${p.c}</span></div>
+   <div class="sub">${p.t}</div>
+   <div class="row"><span class="price num">${egp(p.price)}</span><span class="dots">${p.colors.slice(0,6).map(c=>`<i style="background:${c.h}" title="${c.n}"></i>`).join("")}</span></div></div></button>`).join("");
+}
+render();
+document.getElementById("grid").addEventListener("click",e=>{const b=e.target.closest("[data-p]");if(b)openP(b.dataset.p);});
+
+// size table & finder
+document.getElementById("sizeTable").innerHTML=BODY.map(([s,w,b,wa,h])=>`<tr><td class="ltr">${s}</td><td>${w} كجم</td><td>${b[0]}–${b[1]}</td><td>${wa[0]}–${wa[1]}</td><td>${h[0]}–${h[1]}</td></tr>`).join("");
+function findSize(){
+  const w=+document.getElementById("fw").value, h=+document.getElementById("fh").value, b=+document.getElementById("fb").value;
+  const out=document.getElementById("sizeResult");
+  let i;
+  if(b>=60){ i=BODY.findIndex(r=>b<=r[2][1]); if(i<0)i=7; }
+  else if(w>=35){ const adj=w-(h?Math.max(0,(h-165))*0.4:0); i=BODY.findIndex(r=>adj<=+r[1].split("–")[1]); if(i<0)i=7; }
+  else { out.textContent="اكتبي وزنك علشان نقترح المقاس."; return; }
+  const s=BODY[i][0], ph=PHS[Math.floor(i/2)];
+  out.innerHTML=`مقاسك غالبًا <b class="ltr">${s}</b><br><span class="note">في «ليالي NESRA» خدي <span class="ltr">${ph}</span>. ${b>=60?"اعتمدنا على محيط الصدر.":"لو تعرفي محيط صدرك اكتبيه علشان النتيجة تبقى أدق."}</span>`;
+}
+["fw","fh","fb"].forEach(id=>document.getElementById(id).addEventListener("input",findSize)); findSize();
+document.getElementById("areas").innerHTML=AREAS.map(a=>`<span>${a}</span>`).join("");
+
+// product dialog
+const pd=document.getElementById("pd");
+function openP(code){
+  const p=P.find(x=>x.c===code); let ci=0, si=null, q=1;
+  const sz=sizesOf(p);
+  const draw=()=>{
+    document.getElementById("pdBody").innerHTML=`
+    <div class="gal"><div class="main">${pic(p,ci)}</div>
+      ${p.colors.some(c=>c.img)?`<div class="thumbs">${p.colors.map((c,i)=>c.img?`<button type="button" data-ci="${i}" aria-pressed="${i===ci}" aria-label="${c.n}"><img src="img/${c.img}.jpg" alt=""></button>`:"").join("")}</div>`:""}
+    </div>
+    <div class="info">
+      <div><span class="code">${p.c}</span><h2 id="pdTitle">${p.n}</h2><p class="lead">${p.t}</p></div>
+      <div class="price num" style="font-size:22px">${egp(p.price)}</div>
+      ${p.offer?`<div class="offer">${p.offer}</div>`:""}
+      <p style="margin:0">${p.d}</p>
+      <div class="opt"><span>اللون: <b>${p.colors[ci].n}</b></span><div class="opts">${p.colors.map((c,i)=>`<button type="button" data-ci="${i}" aria-pressed="${i===ci}"><i style="background:${c.h}"></i>${c.n}</button>`).join("")}</div></div>
+      <div class="opt"><span>المقاس${si===null?" (اختاري)":""}</span><div class="opts">${sz.map((s,i)=>`<button type="button" class="ltr" data-si="${i}" aria-pressed="${i===si}">${s}</button>`).join("")}</div></div>
+      <div class="qty"><span class="note">العدد</span><button type="button" data-q="-1" aria-label="أقل">−</button><b class="num">${q}</b><button type="button" data-q="1" aria-label="أكتر">+</button></div>
+      <button class="btn" type="button" id="addBtn">${si===null?"اختاري المقاس الأول":"حطّيها في الشنطة"}</button>
+      <dl class="specs"><dt>الخامة</dt><dd>${p.fab}</dd><dt>المقاسات</dt><dd class="ltr" style="text-align:right">${sz.join(" · ")}</dd><dt>الدفع</dt><dd>كاش عند الاستلام · التسليم خلال ٢٠ يوم من تأكيد الطلب</dd></dl>
+      ${p.specs?`<div class="tablewrap"><table><thead><tr><th>مقاس القطعة</th>${p.specs.map(r=>`<th class="ltr">${r[0]}</th>`).join("")}</tr></thead><tbody><tr><td>محيط الصدر</td>${p.specs.map(r=>`<td>${r[1]}</td>`).join("")}</tr><tr><td>الطول</td>${p.specs.map(r=>`<td>${r[2]}</td>`).join("")}</tr></tbody></table></div><p class="note" style="margin:0">مقاسات القطعة الجاهزة بالسنتيمتر (تقريبية). التفاوت ±١–٢ سم.</p>`:""}
+    </div>`;
+  };
+  draw();
+  pd.onclick=e=>{
+    if(e.target===pd||e.target.closest("[data-close]")){pd.close();return;}
+    const b=e.target.closest("button"); if(!b)return;
+    if(b.dataset.ci!==undefined){ci=+b.dataset.ci;draw();}
+    else if(b.dataset.si!==undefined){si=+b.dataset.si;draw();}
+    else if(b.dataset.q){q=Math.max(1,q+(+b.dataset.q));draw();}
+    else if(b.id==="addBtn"&&si!==null){addToBag(p,ci,sz[si],q);pd.close();openBag();}
+  };
+  pd.showModal();
+}
+
+// bag
+let BAG=[];
+try{BAG=JSON.parse(localStorage.getItem("nesraBag")||"[]")}catch(e){BAG=[]}
+const saveBag=()=>{try{localStorage.setItem("nesraBag",JSON.stringify(BAG))}catch(e){} const _n=BAG.reduce((a,b)=>a+b.q,0),_c=document.getElementById("bagCount");_c.textContent=_n;_c.toggleAttribute("data-zero",!_n);document.getElementById("openBag").setAttribute("aria-label",_n?`الشنطة (${_n})`:"الشنطة");};
+function addToBag(p,ci,size,q){const ex=BAG.find(x=>x.c===p.c&&x.ci===ci&&x.size===size); if(ex)ex.q+=q; else BAG.push({c:p.c,ci,size,q}); saveBag();}
+function totals(){
+  let sub=0, ship=SHIP;
+  const byCode={};BAG.forEach(x=>byCode[x.c]=(byCode[x.c]||0)+x.q);
+  let freeShip=false;
+  BAG.forEach(x=>{const p=P.find(y=>y.c===x.c);let unit=p.price;
+    if(x.c==="FD01"&&byCode.FD01>=6){unit=650;freeShip=true}
+    if(x.c==="NH05"&&byCode.NH05>=3){unit=1400;freeShip=true}
+    sub+=unit*x.q;});
+  if(freeShip||!BAG.length)ship=0;
+  return {sub,ship,total:sub+ship};
+}
+const bag=document.getElementById("bag");
+function openBag(){drawBag();bag.showModal();}
+document.getElementById("openBag").addEventListener("click",openBag);
+function drawBag(){
+  const t=totals();
+  document.getElementById("bagBody").innerHTML=`<h2 id="bagTitle" style="font-size:26px">شنطتك</h2>
+  ${BAG.length?BAG.map((x,i)=>{const p=P.find(y=>y.c===x.c);return `<div class="line">${pic(p,x.ci)}<div><b>${p.n}</b> <span class="code">${p.c}</span><small>${p.colors[x.ci].n} · <span class="ltr">${x.size}</span> · ${x.q} قطعة</small></div><button type="button" data-rm="${i}" aria-label="شيل">شيل</button></div>`}).join(""):'<p class="note">الشنطة فاضية. اختاري موديل من القائمة.</p>'}
+  ${BAG.length?`<div class="totals"><div><span>المنتجات</span><span class="num">${egp(t.sub)}</span></div><div><span>التوصيل (القاهرة)</span><span class="num">${t.ship?egp(t.ship):"مجاني"}</span></div><div class="grand"><span>الإجمالي</span><span class="num">${egp(t.total)}</span></div><div><span>طريقة الدفع</span><span>كاش عند الاستلام</span></div></div>
+  <form class="form" id="orderForm" novalidate>
+    <label class="full" for="oName">الاسم بالكامل<input id="oName" required autocomplete="name"></label>
+    <label for="oArea">المنطقة في القاهرة<select id="oArea" required><option value="">اختاري</option>${AREAS.map(a=>`<option>${a}</option>`).join("")}</select></label>
+    <label for="oStreet">الشارع ورقم العمارة والدور<input id="oStreet" required></label>
+    <label class="full" for="oMark">علامة مميزة<input id="oMark" placeholder="مثلًا: جنب مسجد / أمام صيدلية"></label>
+    <label for="oP1">موبايل للتواصل<input id="oP1" class="ltr" inputmode="tel" required></label>
+    <label for="oP2">موبايل تاني<input id="oP2" class="ltr" inputmode="tel"></label>
+    <button class="btn full" type="submit" id="sendOrder">أكّدي الطلب · الدفع عند الاستلام</button>
+  </form><div id="sendBox"></div>`:""}`;
+}
+bag.addEventListener("click",e=>{
+  if(e.target===bag||e.target.closest("[data-close]")){bag.close();return;}
+  const r=e.target.closest("[data-rm]"); if(r){BAG.splice(+r.dataset.rm,1);saveBag();drawBag();}
+});
+bag.addEventListener("submit",e=>{
+  e.preventDefault();
+  const v=id=>document.getElementById(id).value.trim();
+  if(!v("oName")||!v("oArea")||!v("oStreet")||!v("oP1")){document.getElementById("sendBox").innerHTML='<p class="note" style="color:var(--brand)">اكتبي الاسم والمنطقة والعنوان ورقم الموبايل.</p>';return;}
+  const t=totals();
+  const lines=BAG.map(x=>{const p=P.find(y=>y.c===x.c);return `• ${p.n} ${p.c} — ${p.colors[x.ci].n} — مقاس ${x.size} — ${x.q} قطعة`}).join("\n");
+  const oid="NH"+Date.now().toString().slice(-6);
+  const msg=`طلب جديد من موقع NESRA Home · رقم ${oid}\n${lines}\nالإجمالي: ${t.total} جنيه (شامل التوصيل ${t.ship} جنيه)\nالدفع: كاش عند الاستلام\n\nالاسم: ${v("oName")}\nالمحافظة: القاهرة\nالمنطقة: ${v("oArea")}\nالعنوان: ${v("oStreet")}\nعلامة مميزة: ${v("oMark")||"-"}\nموبايل ١: ${v("oP1")}\nموبايل ٢: ${v("oP2")||"-"}`;
+  const btn=document.getElementById("sendOrder"); if(btn){btn.disabled=true;btn.textContent="جاري إرسال الطلب…";}
+  const done=ok=>{
+    document.getElementById("sendBox").innerHTML=`<div style="display:grid;gap:8px">${ok?`<div class="offer"><b>تم استلام طلبك 🤍 رقم الطلب <span class="ltr">${oid}</span></b><br>هنكلمك على الواتساب خلال ٢٤ ساعة نأكد التفاصيل. الدفع كاش عند الاستلام.</div>`:`<div class="offer">ابعتي الطلب على الواتساب علشان نأكده معاكي.</div>`}
+    <a class="btn ${ok?'ghost':''}" href="https://wa.me/${WA}?text=${encodeURIComponent(msg)}" target="_blank" rel="noopener">${ok?'ابعتي نسخة على الواتساب (اختياري)':'افتحي واتساب وابعتي الطلب'}</a>
+    <p class="note" style="margin:0">لأي استفسار: واتساب <span class="ltr num">01290028408</span> أو <a class="ltr" href="mailto:${EMAIL}">${EMAIL}</a></p></div>`;
+    if(ok){BAG=[];saveBag();}
+  };
+  fetch("https://formsubmit.co/ajax/"+EMAIL,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify({_subject:"طلب جديد "+oid+" · NESRA Home",_template:"box",_captcha:"false","رقم الطلب":oid,"الطلب":lines,"الإجمالي":t.total+" جنيه (شامل التوصيل "+t.ship+")","الدفع":"كاش عند الاستلام","الاسم":v("oName"),"المنطقة":v("oArea"),"العنوان":v("oStreet"),"علامة مميزة":v("oMark")||"-","موبايل 1":v("oP1"),"موبايل 2":v("oP2")||"-"})})
+   .then(r=>r.json()).then(j=>done(j&&String(j.success)==="true")).catch(()=>done(false));
+});
+saveBag();
+</script>
+
+
+</body></html>
