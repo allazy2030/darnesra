@@ -181,7 +181,18 @@ dialog::backdrop{background:rgba(20,10,14,.55)}
 textarea#msg{width:100%;min-height:110px;border:1px solid var(--line);border-radius:10px;background:var(--bg);padding:8px;font-size:13px}
 @media (max-width:480px){.form{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
-</style></head><body>
+</style><style id="intlcss">html.geo-pending .price,html.geo-pending .offer{visibility:hidden}
+html.intl .price,html.intl .offer,html.intl .card .badge:not(.new),html.intl #openBag,html.intl .strip,html.intl .totals,html.intl #addBtn,html.intl .qty,html.intl .facts,html.intl #delivery,html.intl .egonly,html.intl a[href="#delivery"]{display:none!important}
+.wsale,.wsale-btn{display:none!important}html.intl .wsale{display:block!important}html.intl .wsale-btn{display:inline-flex!important}
+.wsale{background:#7B2232;color:#fff;text-align:center;padding:10px 16px;font-size:14px;line-height:1.6}.wsale a{color:#fff;font-weight:700;text-decoration:underline;margin-inline-start:6px}</style>
+<script>(function(){var d=document.documentElement,K="nesra_cc";function apply(c){if(c&&c!=="EG")d.classList.add("intl");d.classList.remove("geo-pending")}
+var q=location.search;if(/[?&]w=1/.test(q)){try{sessionStorage.setItem(K,"WS")}catch(e){}apply("WS");return}
+var c=null;try{c=sessionStorage.getItem(K)}catch(e){}if(c){apply(c);return}
+d.classList.add("geo-pending");var done=false;function fin(cc){if(done)return;done=true;if(cc){try{sessionStorage.setItem(K,cc)}catch(e){}}apply(cc)}
+fetch("https://get.geojs.io/v1/ip/country.json").then(function(r){return r.json()}).then(function(j){fin(j.country)}).catch(function(){fetch("https://api.country.is/").then(function(r){return r.json()}).then(function(j){fin(j.country)}).catch(function(){fin(null)})});
+setTimeout(function(){fin(null)},3000)})();</script>
+</head><body>
+<div class="wsale">بنبيع جملة فقط للتجار والمستوردين خارج مصر · أسعار الجملة والكتالوج على واتساب <a href="https://wa.me/201290028408?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D9%86%D8%A7%20%D8%AA%D8%A7%D8%AC%D8%B1%20%D9%88%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%B9%D8%A7%D8%B1%20%D8%A7%D9%84%D8%AC%D9%85%D9%84%D8%A9%20%D9%84%D9%85%D9%88%D8%AF%D9%8A%D9%84%D8%A7%D8%AA%20NESRA%20HOME" target="_blank" rel="noopener">اطلب أسعار الجملة</a></div>
 
 <div class="strip">الدفع كاش عند الاستلام · التوصيل داخل القاهرة · التسليم خلال ٢٠ يوم من تأكيد الطلب</div>
 <header class="top"><div class="wrap bar">
@@ -197,7 +208,7 @@ textarea#msg{width:100%;min-height:110px;border:1px solid var(--line);border-rad
   <div>
     <div class="eyebrow">هوم وير مصري · من S لحد 5XL</div>
     <h1>شياكتك تبدأ من بيتك</h1>
-    <p>فساتين بيت وبيجامات بخامات مريحة بتتنفّس وتصميم انسيابي، بمقاسات من S لحد 5XL. اختاري لونك ومقاسك واطلبي في دقيقة، والدفع كاش عند الاستلام.</p>
+    <p>فساتين بيت وبيجامات بخامات مريحة بتتنفّس وتصميم انسيابي، بمقاسات من S لحد 5XL. <span class="egonly">اختاري لونك ومقاسك واطلبي في دقيقة، والدفع كاش عند الاستلام.</span></p>
     <div class="cta"><a class="btn" href="#shop">شوفي الموديلات</a><a class="btn ghost" href="#sizes">اعرفي مقاسك</a></div>
     <div class="facts">
       <div><b class="num">١٣</b>موديل</div>
@@ -260,9 +271,9 @@ textarea#msg{width:100%;min-height:110px;border:1px solid var(--line);border-rad
 <!--about--><style>.catlist{columns:2;column-gap:28px;padding-inline-start:18px;margin-top:8px}@media (max-width:640px){.catlist{columns:1}}</style><section id="about"><div class="wrap" style="max-width:820px">
   <div class="sechead"><div><h2>عن NESRA Home</h2></div></div>
   <p>NESRA Home (نسرة هوم) براند هوم وير مصري من القاهرة. بنصمّم <strong>فساتين بيت</strong> و<strong>بيجامات حريمي</strong> و<strong>قفاطين بيت</strong> بخامات بتتنفّس زي الجيرسي الفيسكوز والقطن والفيسكوز الشالي، بتصميم انسيابي مريح، وبمقاسات من <span class="ltr">S</span> لحد <span class="ltr">5XL</span> مع جدول مقاسات بالسنتيمتر لكل موديل.</p>
-  <p>بنبيع أونلاين على <span class="ltr">darnesra.com</span> وعلى واتساب <span class="ltr num">01290028408</span>. الدفع كاش عند الاستلام من غير دفع مقدم، والتوصيل داخل القاهرة بـ ٨٠ جنيه، والتسليم خلال ٢٠ يوم من تأكيد الطلب لأننا بنصنّع كل كمية على قد الطلبات.</p>
+  <p class="egonly">بنبيع أونلاين على <span class="ltr">darnesra.com</span> وعلى واتساب <span class="ltr num">01290028408</span>. الدفع كاش عند الاستلام من غير دفع مقدم، والتوصيل داخل القاهرة بـ ٨٠ جنيه، والتسليم خلال ٢٠ يوم من تأكيد الطلب لأننا بنصنّع كل كمية على قد الطلبات.</p>
   <h3 style="margin-top:18px">كل الموديلات</h3>
-  <ul class="catlist"><li><a href="p/layan.html">ليان</a> · فستان قصير بأكمام دانتيل وكرانيش · ٨٠٠ جنيه</li><li><a href="p/camellia.html">كاميليا</a> · بيجامة زراير قميص وبنطلون · ١٦٠٠ جنيه</li><li><a href="p/talia.html">تاليا</a> · فستان قصير بالكرانيش · ٧٥٠ جنيه</li><li><a href="p/sila.html">سيلا</a> · فستان سادة بلمسة ليوبارد · ٧٩٠ جنيه</li><li><a href="p/salma.html">سلمى</a> · فستان ميدي A برقبة V وجيوب · ٦٩٠ جنيه</li><li><a href="p/fairouz.html">فيروز</a> · فستان ميدي بكم كاب وفتحة رقبة · ٧٥٠ جنيه</li><li><a href="p/zeina.html">زينة</a> · فستان ميدي بخصر إمباير ووردة مطبوعة · ٦٥٠ جنيه</li><li><a href="p/jouri.html">جوري</a> · فستان بيت قصير A-line · ٦٩٠ جنيه</li><li><a href="p/flora.html">فلورا</a> · توب مورّد + بنطلون واسع · ٧٩٠ جنيه</li><li><a href="p/nada.html">ندى</a> · قميص قصير + شورت واسع · ٧٢٠ جنيه</li><li><a href="p/lilac.html">ليلاك</a> · توب لفّة + كابري · ٧٩٠ جنيه</li><li><a href="p/yasmine.html">ياسمين</a> · قفطان واسع للكاحل · ٨٩٠ جنيه</li><li><a href="p/luna.html">لونا</a> · قميص نوم طويل ستان · ٨٩٠ جنيه</li></ul>
+  <ul class="catlist"><li><a href="p/layan.html">ليان</a> · فستان قصير بأكمام دانتيل وكرانيش<span class="egonly"> · ٨٠٠ جنيه</span></li><li><a href="p/camellia.html">كاميليا</a> · بيجامة زراير قميص وبنطلون<span class="egonly"> · ١٦٠٠ جنيه</span></li><li><a href="p/talia.html">تاليا</a> · فستان قصير بالكرانيش<span class="egonly"> · ٧٥٠ جنيه</span></li><li><a href="p/sila.html">سيلا</a> · فستان سادة بلمسة ليوبارد<span class="egonly"> · ٧٩٠ جنيه</span></li><li><a href="p/salma.html">سلمى</a> · فستان ميدي A برقبة V وجيوب<span class="egonly"> · ٦٩٠ جنيه</span></li><li><a href="p/fairouz.html">فيروز</a> · فستان ميدي بكم كاب وفتحة رقبة<span class="egonly"> · ٧٥٠ جنيه</span></li><li><a href="p/zeina.html">زينة</a> · فستان ميدي بخصر إمباير ووردة مطبوعة<span class="egonly"> · ٦٥٠ جنيه</span></li><li><a href="p/jouri.html">جوري</a> · فستان بيت قصير A-line<span class="egonly"> · ٦٩٠ جنيه</span></li><li><a href="p/flora.html">فلورا</a> · توب مورّد + بنطلون واسع<span class="egonly"> · ٧٩٠ جنيه</span></li><li><a href="p/nada.html">ندى</a> · قميص قصير + شورت واسع<span class="egonly"> · ٧٢٠ جنيه</span></li><li><a href="p/lilac.html">ليلاك</a> · توب لفّة + كابري<span class="egonly"> · ٧٩٠ جنيه</span></li><li><a href="p/yasmine.html">ياسمين</a> · قفطان واسع للكاحل<span class="egonly"> · ٨٩٠ جنيه</span></li><li><a href="p/luna.html">لونا</a> · قميص نوم طويل ستان<span class="egonly"> · ٨٩٠ جنيه</span></li></ul>
 </div></section><!--/about-->
 <section id="faq"><div class="wrap" style="max-width:820px">
   <div class="sechead"><div><h2>أسئلة بتتكرر</h2></div></div>
@@ -392,8 +403,8 @@ function openP(code){
       <div class="opt"><span>اللون: <b>${p.colors[ci].n}</b></span><div class="opts">${p.colors.map((c,i)=>`<button type="button" data-ci="${i}" aria-pressed="${i===ci}"><i style="background:${c.h}"></i>${c.n}</button>`).join("")}</div></div>
       <div class="opt"><span>المقاس${si===null?" (اختاري)":""}</span><div class="opts">${sz.map((s,i)=>`<button type="button" class="ltr" data-si="${i}" aria-pressed="${i===si}">${s}</button>`).join("")}</div></div>
       <div class="qty"><span class="note">العدد</span><button type="button" data-q="-1" aria-label="أقل">−</button><b class="num">${q}</b><button type="button" data-q="1" aria-label="أكتر">+</button></div>
-      <button class="btn" type="button" id="addBtn">${si===null?"اختاري المقاس الأول":"حطّيها في الشنطة"}</button>
-      <dl class="specs"><dt>الخامة</dt><dd>${p.fab}</dd><dt>المقاسات</dt><dd class="ltr" style="text-align:right">${sz.join(" · ")}</dd><dt>الدفع</dt><dd>كاش عند الاستلام · التسليم خلال ٢٠ يوم من تأكيد الطلب</dd></dl>
+      <a class="btn wsale-btn" target="_blank" rel="noopener" href="https://wa.me/201290028408?text=${encodeURIComponent("مرحبًا، أنا تاجر وعايز سعر الجملة لموديل "+p.n+" "+p.c)}">اطلب سعر الجملة على واتساب</a><button class="btn" type="button" id="addBtn">${si===null?"اختاري المقاس الأول":"حطّيها في الشنطة"}</button>
+      <dl class="specs"><dt>الخامة</dt><dd>${p.fab}</dd><dt>المقاسات</dt><dd class="ltr" style="text-align:right">${sz.join(" · ")}</dd><dt class="egonly">الدفع</dt><dd class="egonly">كاش عند الاستلام · التسليم خلال ٢٠ يوم من تأكيد الطلب</dd></dl>
       ${p.specs?`<div class="tablewrap"><table><thead><tr><th>مقاس القطعة</th>${p.specs.map(r=>`<th class="ltr">${r[0]}</th>`).join("")}</tr></thead><tbody><tr><td>محيط الصدر</td>${p.specs.map(r=>`<td>${r[1]}</td>`).join("")}</tr><tr><td>الطول</td>${p.specs.map(r=>`<td>${r[2]}</td>`).join("")}</tr></tbody></table></div><p class="note" style="margin:0">مقاسات القطعة الجاهزة بالسنتيمتر (تقريبية). التفاوت ±١–٢ سم.</p>`:""}
     </div>`;
   };
